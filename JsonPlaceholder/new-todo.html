@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./todo.html">To Do</a></li>
+          <li><a href="./users.html">Users</a></li>
+          <li><a href="./cats.html">Cats</a></li>
+
+          <li><a href="./new-todo.html">New Todo</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>New Task</h1>
+        <label for="userId">User ID: </label><br />
+        <input type="number" name="userId" id="userId" required /><br /><br />
+        <label for="title">Title: </label><br />
+        <input type="text" name="title" id="title" required /><br /><br />
+        <label for="completed">Completed: </label><br />
+        <input
+          type="text"
+          name="completed"
+          id="completed"
+          required
+        /><br /><br />
+        <button type="button" id="add">Add</button>
+        <p id="errMsg"></p>
+        <script src="./new-todo.js"></script>
+      </main>
+    </header>
+  </body>
+</html>
