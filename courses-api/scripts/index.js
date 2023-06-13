@@ -1,5 +1,11 @@
 console.log("js working");
-const headers = ["Department", "Course Number", "Title", "More Info"];
+const headers = [
+  "Department",
+  "Course Number",
+  "Title",
+  "More Info",
+  "Remove Course",
+];
 
 const courseTblEl = document.getElementById("courseTbl");
 generateHeaders(courseTbl, headers);
@@ -15,7 +21,9 @@ onload = async () => {
     const courseNumCell = row.insertCell();
     const titleCell = row.insertCell();
     const linkCell = row.insertCell();
+    const delCell = row.insertCell();
 
+    delCell.outerHTML = `<td><a href='./deletecourse.html?courseid=${course.id}'>Delete</a></td> `;
     linkCell.outerHTML = `<td><a href='./details.html?courseid=${course.id}'>See Details</a></td> `;
     departmentCell.textContent = course.dept;
     courseNumCell.textContent = course.courseNum;
