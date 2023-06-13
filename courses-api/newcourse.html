@@ -5,8 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <script src="./scripts/index.js"></script>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-sm bg-light">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./newcourse.html">Add a course</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1>New Course</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="dept" class="form-label">Department:</label>
+            <select class="form-select" id="dept">
+              <option value="choose">Choose one...</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="courseNum" class="form-label">Course number:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="courseNum"
+              placeholder="Course Number"
+              name="courseNum"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="courseName" class="form-label">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="courseName"
+              placeholder="Course Name"
+              name="courseName"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="instructor" class="form-label">Instructor:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="instructor"
+              placeholder="Instructor Name"
+              name="instructor"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="startDate" class="form-label">Start Date:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="startDate"
+              placeholder=""
+              name="startDate"
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="numDays" class="form-label">Duration:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="numDays"
+              placeholder="Duration (days)"
+              name="numDays"
+            />
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-primary" id="add">Add</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p id="errMsg"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/newcourse.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
