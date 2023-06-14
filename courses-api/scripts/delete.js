@@ -39,12 +39,14 @@ deleteBtnEl.addEventListener("click", () => {
   }
   url = `http://localhost:8081/api/courses/${id}`;
   fetch(url, {
-    method: "Delete",
+    method: "DELETE",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
   })
-    .then((response) => response.json())
-    .then((course) => {
+    .then((response) => {
       errMsgEl.innerHTML = `Course was successfully Removed, redirecting to home.`;
-      console.log(course);
+      console.log(errMsgEl.textContent);
       setTimeout(() => {
         window.location.href = "./index.html";
       }, "1500");
