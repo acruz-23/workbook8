@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(location.search);
 const deleteMsgEl = document.getElementById("deleteMsg");
 const courseTbl = document.getElementById("course");
 const deleteBtnEl = document.getElementById("deleteBtn");
+const cancelBtnEl = document.getElementById("cancel");
 const errMsgEl = document.getElementById("errMsg");
 const headers = {
   id: "Course ID",
@@ -31,6 +32,7 @@ if (urlParams.has("courseid") === true) {
   deleteMsgEl.textContent =
     "Please select a valid course from the main course list";
   deleteBtnEl.textContent = "Course List";
+  cancelBtnEl.style.display = "none";
 }
 deleteBtnEl.addEventListener("click", () => {
   if (id === -1) {
@@ -40,9 +42,6 @@ deleteBtnEl.addEventListener("click", () => {
   url = `http://localhost:8081/api/courses/${id}`;
   fetch(url, {
     method: "DELETE",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
   })
     .then((response) => {
       errMsgEl.innerHTML = `Course was successfully Removed, redirecting to home.`;
